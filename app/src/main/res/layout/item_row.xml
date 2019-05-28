@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="datapackage"
+            type="tr.com.harunkor.mvvmdesignpatternsample.model.Package" />
+
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.name}" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.desc}" />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.price.toString()}" />
+
+
+
+            <TextView
+                android:id="@+id/availableUntil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.availableUntil}" />
+
+
+            <TextView
+                android:id="@+id/didUseBefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.didUseBefore.toString()}" />
+
+
+            <TextView
+                android:id="@+id/benefits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{datapackage.benefits.toString()}" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
